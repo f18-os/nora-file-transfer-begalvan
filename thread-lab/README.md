@@ -21,3 +21,9 @@ To run files:
 
     client will immediately send send_file.txt to server, server will receive up to 100 bytes at a time
 form socket and will write data to create new file
+
+steps:
+lock=threading.lock() - first
+lock.aquire - second
+lock.release() - third
+
