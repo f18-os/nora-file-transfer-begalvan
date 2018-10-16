@@ -29,7 +29,7 @@ while i <= num_of_clients:
             if data == b'start': #bytes-start
                 continue
             elif data == b'end':
-                print('Breaking from file write')
+                print("Breaking from file write")
                 break
             else:
                 decoded_data = data.decode("utf-8")
@@ -37,3 +37,9 @@ while i <= num_of_clients:
                     print("\nconnection with client " + str(i) + " broken\n")
                     print("  CLIENT " + str(i) + " -> " + decoded_data)
                     break
+
+                else:
+                    print("Received: ", decoded_data)
+                    fw.write(data)
+                    print("Wrote to file", decoded_data)
+                
