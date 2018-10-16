@@ -13,11 +13,11 @@ def send_file():
         sock.send(b'start')
         while True:
             data = fs.read(1024)
-            print('Sending data', data.decode('utf-8'))
+            print("Sending data", data.decode('utf-8'))
             sock.send(data)
-            print('Sent data', data.decode('utf-8'))
+            print("Sent data", data.decode('utf-8'))
             if not data:
-                print("File is empty now!")
+                print("File now empty")
                 print('Breaking from sending data')
                 break
         sock.send(b'end')
