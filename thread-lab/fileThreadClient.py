@@ -35,3 +35,7 @@ def send_file():
     print("Received..")
 
     sock.close()
+
+def file_empty():
+    print("No data on file found, or no file")
+
