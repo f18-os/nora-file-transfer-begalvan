@@ -68,3 +68,8 @@ while i <= num_of_clients:
         fa.close()
         print("Sent file.")
     break
+
+else:
+    i += 1
+lock.release() #new client/up to 5
+server.close()
