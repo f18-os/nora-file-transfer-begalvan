@@ -43,3 +43,20 @@ while i <= num_of_clients:
                     fw.write(data)
                     print("Wrote to file", decoded_data)
                 
+        fw.close()
+        print("Received..")
+        decoded_data = data.decode("utf-8")
+        if not decoded_data:
+            print("\nconnection with client " + str(i) + " broken\n")
+            break
+        print("  CLIENT " + str(i) + " -> " + decoded_data)
+
+ # Append and send file
+    print("Opening file ", text_file)
+    with open(text_file, 'ab+') as fa:
+        print("Opened file")
+        print("Appending string to file.")
+        string = b"Append this to file."
+        fa.write(string)
+        fa.seek(0, 0)
+        print("Sending file.")
