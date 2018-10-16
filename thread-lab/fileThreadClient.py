@@ -22,3 +22,16 @@ def send_file():
                 break
         sock.send(b'end')
         fs.close()
+
+    # file received
+    print("Receiving..")
+    with open(text_file, 'wb') as fw:
+        while True:
+            data = sock.recv(1024)
+            if not data:
+                break
+            fw.write(data)
+        fw.close()
+    print("Received..")
+
+    sock.close()
