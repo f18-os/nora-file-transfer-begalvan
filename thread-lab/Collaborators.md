@@ -5,33 +5,25 @@ CS 4375
 Blanca Galván ID# 88594199
 
 Directory `thread-lab` includes: 
+
 fileThreadClient.py and fileThreadServer.py.
 
-*   `fileThreadedClient.py` transfers a file to the server using port 50001
+For this lab assignment I received help from Abigail Lira to understand 
+and implement the concept of "lock-acquire-release" for threads. Also used external resources 
+and links for code reference and examples.
 
-*   `fileThreadedServer.py` receives a file from client -up to 100 bytes from the socket at a time- listening on port 50001
+External resources and links for code reference, concept understanding and lab implementation:
 
-These files run on Cygwin Python Version 3
-
-To run files: 
-
-* 1. Open fileServer.py:
-
-        python3 fileServer.py
-
-* 2. Open fileClient.py (up to 5 clients):
-
-        python3 fileClient.py
-
-    client will immediately send send_file.txt to server, server will receive up to 100 bytes at a time
-form socket and will write data to create new file
-
-steps:
-lock=threading.lock() - first
-lock.aquire - second
-lock.release() - third
-
-Concept reference:
 http://www.insiderattack.net/2013/07/hacker-python-3-multi-threaded-tcp-echo.html
 
 https://docs.python.org/3/library/threading.html#module-threading
+
+https://stackoverflow.com/questions/46775320/simple-python-server-client-file-transfer
+
+https://pastebin.com/KADZpqkM
+
+https://pastebin.com/LySsgEe4
+
+https://www.bogotobogo.com/python/python_network_programming_server_client_file_transfer.php
+
+https://stackoverflow.com/questions/28840624/forking-server-in-python
